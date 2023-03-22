@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
     <title>Document</title>
+    
     <style>
-        .drk:after {content: ""; display: block; position: absolute;
-                    top: 0;bottom: 0; left: 0; right: 0;background: black;opacity: 0.6; z-index: 1;}
-        .carousel-caption { z-index: 2;}
+        .item:after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.6);
+}
     </style>
 </head>
 <body>
-    <div id="home" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item drk active"> 
-            <video class="d-block img-fluid w-100" preload muted autoplay loop>
-               <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            </video>
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Push your boundaries. Expand your brand.</h1>
-              <h3>You don’t have to own a business or logo to have a brand. Who are you and what do you do? What are you passionate about? What talents do you have? What is <i>your</i> brand?</h3>
-              <h3>At Free Solo Studios we are just as passionate about you and your brand as we are of our own, and we don’t succeed until you do.</h3>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img style="height: 550px;width: 100%;" class="slide" src="This is the end ….jfif" alt="First slide">
+          <div class="container">
+            <div style="text-align: left;margin-bottom: 150px;" class="carousel-caption">
+              <h1>Stop Waiting.</h1>
+              <h2>Start Doing.</h2> <br>
+              <button type="button" class="btn btn-outline-secondary">Download for free</button>
             </div>
           </div>
         </div>
