@@ -36,7 +36,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col-md-7"">
+            <div class="col-md-7">
                 <nav id="navbar-example2" class="navbar px-3 mb-3" style="display: flex;">
                     <a class="navbar-brand" href="#">
                         <img src="orange logo.png" width="100px" height="100px" role="img" alt="Boosted - Back to Home" loading="lazy">
@@ -51,10 +51,10 @@
                     </ul>
                 </nav><span class="border-bottom"></span>
                 <div class="left-side" style="margin: 20px;">
-                    <form>
+                    <form action="#" id="form">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email Address <b style="color: orange;font-size: larger;">*</b></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onkeydown="validation()">
                             <div id="emailHelp" class="form-text">eg: username@domain.com</div>
                         </div>
                         <div class="mb-3">
@@ -81,5 +81,32 @@
             </div>
         </div>
     </div>
+<script>
+    function validation() {
+            let form = document.getElementById('form')
+            let email = document.getElementById('email').value
+            let text = document.getElementById('text')
+            let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+            if (email.match(pattern)) {
+                    form.classList.add('valid')
+                    form.classList.remove('invalid')
+                    text.innerHTML = "Your Email Address in valid"
+                    text.style.color = '#00ff00'}
+            else    {
+                    form.classList.remove('valid')
+                    form.classList.add('invalid')
+                    text.innerHTML = "Please Enter Valid Email Address"
+                    text.style.color = '#ff0000'
+                    }
+
+            if (email == '') {
+                    form.classList.remove('valid')
+                    form.classList.remove('invalid')
+                    text.innerHTML = ""
+                    text.style.color = '#00ff00'
+            }
+        }
+</script>
 </body>
 </html>
